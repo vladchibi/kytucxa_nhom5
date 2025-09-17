@@ -1,0 +1,162 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Background */
+body {
+  background: linear-gradient(135deg, #eef3ff, #dfe9ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login box */
+.login-box {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  width: 360px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Icon */
+.login-box .icon span {
+  font-size: 32px;
+  background: #f0f4ff;
+  padding: 14px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* Title */
+.login-box h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.login-box p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Form */
+form {
+  text-align: left;
+}
+
+form label {
+  font-size: 13px;
+  font-weight: bold;
+  display: block;
+  margin: 10px 0 5px;
+}
+
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Password field */
+.password-field {
+  position: relative;
+}
+.password-field a {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+/* Remember me */
+.remember {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.remember label {
+  margin-left: 6px;
+  font-size: 13px;
+  color: #333;
+}
+
+/* Login button */
+.btn-login {
+  width: 100%;
+  background: #3b82f6;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.btn-login:hover {
+  background: #2563eb;
+}
+
+/* Divider */
+.divider {
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+  margin: 15px 0;
+}
+
+/* Social login */
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.social-login .facebook,
+.social-login .google {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+.social-login .facebook {
+  background: #1877f2;
+  color: #fff;
+}
+.social-login .google {
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #444;
+}
+
+/* Register */
+.register {
+  margin-top: 15px;
+  font-size: 13px;
+}
+.register a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: bold;
+}
