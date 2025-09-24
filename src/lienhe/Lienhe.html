@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DormSpace - Liên hệ</title>
+  <style>
+    /* Giữ nguyên toàn bộ CSS của bạn */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background: #f5f7fa; color: #333; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 15px 50px; background: #fff; border-bottom: 1px solid #e0e0e0; }
+    header .logo { font-size: 22px; font-weight: bold; color: #2563eb; }
+    nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: 500; }
+    .user { font-size: 14px; color: #555; }
+    .banner { background: linear-gradient(to right, #4338ca, #2563eb); color: #fff; text-align: center; padding: 40px 20px; }
+    .banner h1 { font-size: 28px; margin-bottom: 10px; }
+    .container { max-width: 1100px; margin: 40px auto; display: grid; grid-template-columns: 1fr 2fr; gap: 20px; }
+    .contact-info, .contact-form { background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .contact-info h3, .contact-form h3 { margin-bottom: 15px; font-size: 18px; color: #2563eb; }
+    .contact-info ul { list-style: none; margin-bottom: 15px; }
+    .contact-info ul li { margin-bottom: 10px; font-size: 14px; line-height: 1.5; }
+    .contact-info .social a { display: inline-block; margin-right: 10px; font-size: 18px; color: #2563eb; text-decoration: none; }
+    .contact-form label { display: block; margin-bottom: 5px; font-weight: 500; font-size: 14px; }
+    .contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ccc; font-size: 14px; }
+    .contact-form button { display: block; width: 100%; padding: 12px; border: none; border-radius: 6px; background: #2563eb; color: #fff; font-size: 16px; font-weight: 600; cursor: pointer; }
+    footer { background: #111827; color: #ddd; padding: 40px 50px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    footer h4 { margin-bottom: 10px; font-size: 16px; color: #fff; }
+    footer p, footer a { font-size: 14px; color: #bbb; text-decoration: none; }
+    footer input { padding: 10px; border-radius: 6px; border: none; width: 70%; margin-right: 5px; }
+    footer button { padding: 10px 15px; border: none; border-radius: 6px; background: #2563eb; color: #fff; font-size: 14px; cursor: pointer; }
+    .copyright { grid-column: span 3; text-align: center; margin-top: 20px; font-size: 13px; color: #777; }
+    @media (max-width: 900px) { .container { grid-template-columns: 1fr; } footer { grid-template-columns: 1fr; text-align: center; } footer input { width: 100%; margin-bottom: 10px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">DormSpace</div>
+    <nav>
+      <a href="#">Danh sách KTX</a>
+      <a href="#">Giới thiệu</a>
+      <a href="#">Liên hệ</a>
+      <a href="#">Bài viết</a>
+    </nav>
+    <div class="user">Lê Công Tuấn | abc@gmail.com</div>
+  </header>
+
+  <section class="banner">
+    <p>Trang chủ > Liên hệ</p>
+    <h1>Liên hệ với chúng tôi</h1>
+    <p>Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn</p>
+  </section>
+
+  <section class="container">
+    <!-- Thông tin liên hệ -->
+    <div class="contact-info">
+      <h3>Thông tin liên hệ</h3>
+      <ul>
+        <li><strong>Địa chỉ:</strong><br>02, Nguyễn Trung Ngạn, Đà Nẵng</li>
+        <li><strong>Email:</strong><br>contact@dormspace.vn, support@dormspace.vn</li>
+        <li><strong>Điện thoại:</strong><br>0945610225</li>
+        <li><strong>Giờ làm việc:</strong><br>Thứ 2 - Thứ 6: 8:00 - 17:30<br>Thứ 7: 8:00 - 12:00<br>Chủ nhật: Đóng cửa</li>
+      </ul>
+      <div class="social">
+        <a href="#">🌐</a>
+        <a href="#">📘</a>
+        <a href="#">🐦</a>
+      </div>
+    </div>
+
+    <!-- Form liên hệ -->
+    <div class="contact-form">
+      <h3>Gửi tin nhắn cho chúng tôi</h3>
+      <form id="contactForm">
+        <label for="name">Họ và tên *</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" required>
+
+        <label for="phone">Số điện thoại</label>
+        <input type="text" id="phone">
+
+        <label for="subject">Chủ đề</label>
+        <select id="subject">
+          <option value="">Chọn chủ đề</option>
+          <option>Hỗ trợ kỹ thuật</option>
+          <option>Phản hồi dịch vụ</option>
+          <option>Khác</option>
+        </select>
+
+        <label for="message">Nội dung</label>
+        <textarea id="message" rows="5"></textarea>
+
+        <button type="submit">Gửi tin nhắn</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <h4>DormSpace</h4>
+      <p>Nền tảng đặt phòng ký túc xá hàng đầu Đà Nẵng, giúp sinh viên tìm kiếm và đặt phòng dễ dàng, nhanh chóng và thuận tiện.</p>
+    </div>
+    <div>
+      <h4>Liên kết nhanh</h4>
+      <p><a href="#">Danh sách KTX</a></p>
+      <p><a href="#">Giới thiệu</a></p>
+      <p><a href="#">Liên hệ</a></p>
+    </div>
+    <div>
+      <h4>Theo dõi chúng tôi</h4>
+      <form>
+        <input type="email" placeholder="Email của bạn">
+        <button>Đăng ký</button>
+      </form>
+    </div>
+    <div class="copyright">
+      © 2025 DormSpace. Tất cả các quyền được bảo lưu.
+    </div>
+  </footer>
+
+  <!-- JS gọi API -->
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const data = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
+      };
+
+      try {
+        const res = await fetch("http://localhost:3000/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+
+        const result = await res.json();
+        alert(result.msg);
+      } catch (error) {
+        alert("Không thể gửi tin nhắn. Vui lòng thử lại!");
+      }
+    });
+  </script>
+</body>
+</html>
