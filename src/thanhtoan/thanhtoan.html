@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đặt phòng ký túc xá</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 60px;
+      border-bottom: 1px solid #ddd;
+    }
+    header .logo {
+      font-weight: bold;
+      color: #3b82f6;
+      font-size: 20px;
+    }
+    header nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+    }
+    header .user {
+      font-size: 14px;
+    }
+
+    /* Banner */
+    .banner {
+      text-align: center;
+      background: linear-gradient(to right, #3b82f6, #6366f1);
+      padding: 30px;
+      color: white;
+    }
+    .banner h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+    .steps {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .step {
+      width: 160px;
+      text-align: center;
+      font-size: 14px;
+      color: #ddd;
+    }
+    .step.active {
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Container */
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .section-title {
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #3b82f6;
+    }
+
+    .payment-option {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+    .payment-option input {
+      margin-right: 10px;
+    }
+
+    .qr-box {
+      text-align: center;
+      border: 1px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 15px 0;
+    }
+    .qr-box img {
+      max-width: 200px;
+    }
+    .upload-box {
+      border: 2px dashed #aaa;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      margin: 15px 0;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .info-box {
+      border-top: 1px solid #ddd;
+      padding-top: 15px;
+      margin-top: 15px;
+    }
+    .info-box p {
+      display: flex;
+      justify-content: space-between;
+      margin: 8px 0;
+    }
+    .total {
+      font-weight: bold;
+      color: #e11d48;
+    }
+
+    .btn {
+      display: block;
+      text-align: center;
+      background: linear-gradient(to right, #3b82f6, #6366f1);
+      color: white;
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    /* Footer */
+    footer {
+      background: #111827;
+      color: #ccc;
+      padding: 40px 60px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+    footer h4 {
+      margin-bottom: 10px;
+      color: white;
+    }
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    footer input {
+      padding: 6px;
+      border-radius: 5px;
+      border: none;
+      margin-top: 8px;
+    }
+    footer button {
+      background: #3b82f6;
+      border: none;
+      padding: 6px 10px;
+      color: white;
+      border-radius: 5px;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">DormSpace</div>
+    <nav>
+      <a href="#">Danh sách KTX</a>
+      <a href="#">Giới thiệu</a>
+      <a href="#">Liên hệ</a>
+      <a href="#">Bài viết</a>
+    </nav>
+    <div class="user"> Hải Vân <br><small>Nguyenhaivan03082005@gmail.com</small></div>
+  </header>
+
+  <!-- Banner -->
+  <div class="banner">
+    <h1>Đặt phòng ký túc xá</h1>
+    <p>Hoàn tất thông tin để đặt phòng</p>
+    <div class="steps">
+      <div class="step">Bước 1<br>Thông tin người dùng</div>
+      <div class="step active">Bước 2<br>Phương thức thanh toán</div>
+      <div class="step">Bước 3<br>Xác nhận</div>
+    </div>
+  </div>
+
+  <!-- Nội dung chính -->
+  <div class="container">
+    <div class="section-title">Phương thức thanh toán</div>
+    <div class="payment-option">
+      <input type="radio" name="pay"> Thanh toán qua VNPAY
+    </div>
+    <div class="payment-option">
+      <input type="radio" name="pay" checked> Chuyển khoản ngân hàng
+      <div class="qr-box">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=PAYMENT" alt="QR code">
+        <p><b>Số tiền:</b> 400.000₫</p>
+        <p><b>Nội dung:</b> PHONG_P201_KhuA...</p>
+      </div>
+      <div class="upload-box">
+        Nộp ảnh xác nhận thanh toán<br>
+        <small>(JPG, PNG, tối đa 5MB)</small>
+      </div>
+    </div>
+
+    <div class="section-title">Thông tin thanh toán</div>
+    <div class="info-box">
+      <p><span>Giá phòng:</span> <span>400.000₫</span></p>
+      <p><span>Thời gian lưu trú:</span> <span>30 ngày</span></p>
+      <p class="total"><span>Tổng cộng:</span> <span>400.000₫</span></p>
+    </div>
+
+    <a href="#" class="btn">Tiếp tục thanh toán</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <h4>DormSpace</h4>
+      <p>Nền tảng đặt phòng ký túc xá hàng đầu Đà Nẵng...</p>
+    </div>
+    <div>
+      <h4>Liên kết nhanh</h4>
+      <a href="#">Trang chủ</a><br>
+      <a href="#">Danh sách ký túc xá</a><br>
+      <a href="#">Giới thiệu</a><br>
+      <a href="#">Liên hệ</a>
+    </div>
+    <div>
+      <h4>Liên hệ</h4>
+      <p>Số 4 Nguyễn Lương Bằng, Liên Chiểu, Đà Nẵng</p>
+      <p>contact@dormspace.vn</p>
+      <p>0236 123 4567</p>
+    </div>
+    <div>
+      <h4>Theo dõi chúng tôi</h4>
+      <input type="email" placeholder="Email của bạn">
+      <button>Đăng ký</button>
+    </div>
+  </footer>
+</body>
+</html>
