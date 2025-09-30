@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng ký tài khoản</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .register-container {
+      background: #fff;
+      width: 350px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .register-container h2 { margin-bottom: 10px; font-size: 20px; font-weight: bold; }
+    .register-container p { font-size: 13px; color: #555; margin-bottom: 20px; }
+    .register-container input { width: 100%; padding: 10px; margin: 8px 0; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; }
+    .register-container input:focus { border-color: #3b82f6; outline: none; }
+    .checkbox-container { text-align: left; margin: 10px 0; font-size: 13px; }
+    .register-container button { width: 100%; padding: 12px; background: linear-gradient(to right, #3b82f6, #6366f1); border: none; border-radius: 8px; color: #fff; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+    .register-container button:hover { opacity: 0.9; }
+    .register-container .login-link { margin-top: 15px; font-size: 13px; }
+    .register-container .login-link a { color: #3b82f6; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="register-container">
+    <h2>Đăng ký tài khoản mới</h2>
+    <p>Tạo tài khoản để sử dụng đầy đủ tính năng</p>
+    <form id="registerForm">
+      <input type="text" id="name" placeholder="Họ và tên của bạn" required>
+      <input type="email" id="email" placeholder="Email của bạn" required>
+      <input type="text" id="phone" placeholder="Số điện thoại của bạn" required>
+      <input type="password" id="password" placeholder="Tạo mật khẩu" required>
+      <input type="password" id="confirm" placeholder="Xác nhận mật khẩu" required>
+
+      <div class="checkbox-container">
+        <input type="checkbox" required> Tôi đồng ý với <a href="#">Điều khoản</a> và <a href="#">Chính sách</a>
+      </div>
+
+      <button type="submit">Đăng ký</button>
+      <p id="message" style="color:red; font-size:13px;"></p>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const password = document.getElementById("password").value;
+      const confirm = document.getElementById("confirm").value;
+
+      if (password !== confirm) {
+        return document.getElementById("message").innerText = "Mật khẩu không khớp!";
+      }
+
+      try {
+        const res = await fetch("http://localhost:3000/api/register", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, email, phone, password })
+        });
+
+        const data = await res.json();
+        if (data.ok) {
+          document.getElementById("message").style.color = "green";
+          document.getElementById("message").innerText = data.message;
+        } else {
+          document.getElementById("message").style.color = "red";
+          document.getElementById("message").innerText = data.error;
+        }
+      } catch (err) {
+        document.getElementById("message").innerText = "Lỗi kết nối server!";
+      }
+    });
+  </script>
+</body>
+</html>
