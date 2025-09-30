@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thông tin cá nhân - DormSpace</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f7fb;
+    }
+
+    /* Header */
+    header {
+      background: #fff;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      color: #2563eb;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    .user-info {
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* Tiêu đề */
+    .page-title {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .page-title h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .page-title .buttons {
+      margin-top: 10px;
+    }
+
+    .page-title button {
+      margin: 5px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .btn-blue {
+      background: #2563eb;
+      color: white;
+    }
+
+    .btn-gray {
+      background: #e5e7eb;
+      color: #333;
+    }
+
+    /* Thông tin cá nhân */
+    .profile-card {
+      width: 700px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .profile-header {
+      background: linear-gradient(to right, #2563eb, #6366f1);
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .profile-header .left {
+      display: flex;
+      align-items: center;
+    }
+
+    .profile-header .avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: white;
+      color: #2563eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin-right: 15px;
+    }
+
+    .profile-header .info {
+      font-size: 14px;
+    }
+
+    .profile-header .info h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .profile-header .info p {
+      margin: 2px 0;
+    }
+
+    .profile-header button {
+      background: white;
+      color: #2563eb;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .profile-body {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      font-size: 14px;
+    }
+
+    .profile-body div {
+      padding: 5px 0;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 40px;
+      background: #111827;
+      color: #d1d5db;
+      padding: 30px 60px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #d1d5db;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">DormSpace</div>
+    <nav>
+      <a href="#">Danh sách KTX</a>
+      <a href="#">Gói thuê</a>
+      <a href="#">Liên hệ</a>
+      <a href="#">Bài viết</a>
+    </nav>
+    <div class="user-info">
+      Bùi Quốc Cường <br>
+      Quoccuong@gmail.com
+    </div>
+  </header>
+
+  <!-- Tiêu đề -->
+  <div class="page-title">
+    <h2>Thông tin cá nhân</h2>
+    <div class="buttons">
+      <button class="btn-blue">Thông tin cá nhân</button>
+      <button class="btn-gray">Đơn đặt phòng</button>
+    </div>
+  </div>
+
+  <!-- Thông tin cá nhân -->
+  <div class="profile-card">
+    <div class="profile-header">
+      <div class="left">
+        <div class="avatar">👤</div>
+        <div class="info">
+          <h3>Bùi Quốc Cường</h3>
+          <p>quoccuong@gmail.com</p>
+        </div>
+      </div>
+      <button>Chỉnh sửa</button>
+    </div>
+    <div class="profile-body">
+      <div><strong>Họ và tên:</strong> Bùi Quốc Cường</div>
+      <div><strong>Email:</strong> quoccuong@gmail.com</div>
+      <div><strong>SĐT:</strong> 01234567876</div>
+      <div><strong>Ngày sinh:</strong> 01/01/2004</div>
+      <div><strong>CCCD:</strong> 999999999</div>
+      <div><strong>Giới tính:</strong> Nam</div>
+      <div><strong>Phòng:</strong> Chưa cập nhật</div>
+      <div><strong>Trạng thái:</strong> Đang sử dụng</div>
+      <div><strong>Ngày đăng ký:</strong> 25/06/2025</div>
+    </div>
+        <!-- Form chỉnh sửa (ẩn mặc định) -->
+    <div id="editForm" style="display:none; padding:20px;">
+      <h3>Chỉnh sửa thông tin</h3>
+      <label>Họ và tên: <input type="text" id="editFullName"></label><br><br>
+      <label>Email: <input type="text" id="editEmail"></label><br><br>
+      <label>SĐT: <input type="text" id="editPhone"></label><br><br>
+      <label>Ngày sinh: <input type="date" id="editDob"></label><br><br>
+      <label>CCCD: <input type="text" id="editCccd"></label><br><br>
+      <label>Giới tính: 
+        <select id="editGender">
+          <option value="Nam">Nam</option>
+          <option value="Nữ">Nữ</option>
+        </select>
+      </label><br><br>
+      <label>Phòng: <input type="text" id="editRoom"></label><br><br>
+      <label>Trạng thái: <input type="text" id="editStatus"></label><br><br>
+      <button onclick="saveProfile()">Cập nhật</button>
+    </div>
+
+    <script src="server.js"></script>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <h4>DormSpace</h4>
+      <p>Nền tảng quản lý KTX hiện đại</p>
+    </div>
+    <div>
+      <h4>Liên kết nhanh</h4>
+      <p><a href="#">Danh sách KTX</a></p>
+      <p><a href="#">Gói thuê</a></p>
+      <p><a href="#">Liên hệ</a></p>
+    </div>
+    <div>
+      <h4>Liên hệ</h4>
+      <p>123 Nguyễn Lương Bằng, Liên Chiểu, Đà Nẵng</p>
+      <p>Email: dormspace@gmail.com</p>
+      <p>SĐT: 0123 456 789</p>
+    </div>
+    <div>
+      <h4>Theo dõi chúng tôi</h4>
+      <p><a href="#">Facebook</a> | <a href="#">Zalo</a></p>
+      <input type="text" placeholder="Nhập email nhận tin">
+      <button>Đăng ký</button>
+    </div>
+  </footer>
+
+</body>
+</html>
